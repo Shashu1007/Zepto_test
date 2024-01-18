@@ -1,0 +1,108 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: linear-gradient(45deg, #000, #333);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chip:hover {
+  transform: scale(1.05);
+}
+
+.chip-image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.chip span {
+  margin-left: 4px;
+}
+
+.input-container {
+  position: relative;
+  margin-top: 16px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  font-size: 14px;
+  width: 500px;
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0) ;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.suggestions li:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.suggestions li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.small-font {
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.highlighted {
+  background-color: rgb(0, 0, 0) !important;
+  color: #fff;
+}
